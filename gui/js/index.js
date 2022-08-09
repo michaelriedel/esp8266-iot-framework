@@ -106,7 +106,7 @@ function Root() {
                             binSize={binSize}
                             requestUpdate={fetchData} />
                     </Route>
-                    <Route exact path="/dashboard">
+                    <Route exact path="/">
                         <DashboardPage API={url} 
                             socket={socket}
                             requestData={() => {return displayData;}} />
@@ -114,7 +114,7 @@ function Root() {
                     <Route exact path="/firmware">
                         <FirmwarePage API={url} />
                     </Route>
-                    <Route path="/">
+                    <Route path="/wifi">
                         <WifiPage API={url} />
                     </Route>
                 </Switch>
