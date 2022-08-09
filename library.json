@@ -1,5 +1,5 @@
 {
-    "name": "ESP8266 IoT Framework",
+    "name": "ESP8266 IoT Framework Miris Fork",
     "version": "1.10.0",
     "description": "Framework for IoT projects implementing HTTPS requests, a React web interface, WiFi manager, configuration manager, file manager and OTA updates.",
     "keywords": "esp8266,react,ota-updates,wifi-manager,https,file-manager",
