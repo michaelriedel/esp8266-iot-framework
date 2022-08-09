@@ -7,7 +7,7 @@
     "platforms": "espressif8266",
     "repository": {
         "type": "git",
-        "url": "https://github.com/maakbaas/esp8266-iot-framework.git"
+        "url": "https://github.com/michaelriedel/esp8266-iot-framework.git"
     },
     "dependencies":
     [
