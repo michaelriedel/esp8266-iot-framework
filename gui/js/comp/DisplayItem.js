@@ -45,6 +45,8 @@ export function DisplayItem(props) {
             </FlexibleWidthXYPlot>
         </div>;
 
+    } else if (props.item.display == "multiline") {
+        return <span id={props.item.name} name={props.item.name} className={props.item.type == "bool" ? props.value.toString() : ""}><pre>{props.value.toString()}</pre></span>;        
     } else if (props.item.type == "color") {
         return <input type={props.item.type} id={props.item.name} disabled="disabled" title="This field is read-only" name={props.item,name} style={{cursor: "default"}} value={props.value} />;
     } else {
