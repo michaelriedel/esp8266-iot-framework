@@ -88,9 +88,9 @@ function Root() {
                     {renderMenu("/", loc.titleDash)}
                     {renderMenu("/config", loc.titleConf)}
                     {renderMenu("/wifi", loc.titleWifi)} 
-                    // TODO MIRI make configurable
-                    //{renderMenu("/files", loc.titleFile)}
-                    //{renderMenu("/firmware", loc.titleFw)}
+                    {/* TODO MIRI make configurable */}
+                    {/* {renderMenu("/files", loc.titleFile)} */}
+                    {/* {renderMenu("/firmware", loc.titleFw)} */}
                 </Menu>
 
             </Header>
