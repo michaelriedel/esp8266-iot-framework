@@ -62,6 +62,11 @@ function Root() {
                 setConfigData(bin2obj(data, Config));
             });
     }
+
+    function renderMenu(path, text) {
+        return <li><NavLink onClick={() => setMenu(false)} exact to={path}>{text}</NavLink></li>;
+    }
+
     console.log(configData["projectName"]);
     let projectName = configData["projectName"];
     if (typeof projectName === "undefined") {
@@ -78,14 +83,14 @@ function Root() {
 
             <Header>
                 <h1><HeaderIcon style={{verticalAlign:"-0.1em"}} /> {projectName} {projectVersion}</h1>
-
                 <Hamburger onClick={() => setMenu(!menu)} />
                 <Menu className={menu ? "" : "menuHidden"}>
-                    <li><NavLink onClick={() => setMenu(false)} exact to="/">{loc.titleWifi}</NavLink></li>
-                    <li><NavLink onClick={() => setMenu(false)} exact to="/dashboard">{loc.titleDash}</NavLink></li>
-                    <li><NavLink onClick={() => setMenu(false)} exact to="/config">{loc.titleConf}</NavLink></li>
-                    <li><NavLink onClick={() => setMenu(false)} exact to="/files">{loc.titleFile}</NavLink></li>
-                    <li><NavLink onClick={() => setMenu(false)} exact to="/firmware">{loc.titleFw}</NavLink></li>
+                    {renderMenu("/", loc.titleDash)}
+                    {renderMenu("/config", loc.titleConf)}
+                    {renderMenu("/wifi", loc.titleWifi)} 
+                    // TODO MIRI make configurable
+                    //{renderMenu("/files", loc.titleFile)}
+                    //{renderMenu("/firmware", loc.titleFw)}
                 </Menu>
 
             </Header>
