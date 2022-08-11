@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter, Switch, Route, NavLink} from "react-router-dom";
+import {BrowserRouter, Switch, Route, NavLink, Redirect} from "react-router-dom";
 import { FiBox as HeaderIcon } from "react-icons/fi";
 
 import {GlobalStyle, Menu, Header, Page, Hamburger} from "./comp/UiComponents";
@@ -116,6 +116,9 @@ function Root() {
                     </Route>
                     <Route path="/wifi">
                         <WifiPage API={url} />
+                    </Route>
+                    <Route path="*">
+                        <Redirect to="/" />
                     </Route>
                 </Switch>
             </Page>
