@@ -163,6 +163,7 @@ void webServer::serveProgmem(AsyncWebServerRequest *request)
 
     // Tell the browswer the content is Gzipped
     response->addHeader(PSTR("Content-Encoding"), PSTR("gzip"));
+    response->addHeader(PSTR("Cache-Control"), PSTR("max-age=2592000"));
     
     request->send(response);    
 }
